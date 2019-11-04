@@ -20,7 +20,7 @@ char				*ft_strdup(const char *s1);
 //char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //char				*ft_strsub(char const *s, unsigned int start, size_t len);                 ft_substr
 char				*ft_strjoin(char const *s1, char const *s2);
-//char				*ft_strtrim(char const *s);
+char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
 
 //------------------------------------ MEM --------------------------------------\\
@@ -38,11 +38,11 @@ void				ft_bzero(void *s, size_t n);
 
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
-//void				ft_putendl(char const *s);
+void				ft_putendl(char const *s);
 void				ft_putnbr(int nb);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
-//void				ft_putendl_fd(char const *s, int fd);
+void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int nb, int fd);
 
 //------------------------------------ IS ---------------------------------------\\
@@ -90,7 +90,7 @@ void				ft_putnbr_base_fd(int nbr, char *base, int fd);
 
 //------------------------------------ IS ---------------------------------------\\
 
-int				is_charset(char c, char *charset);
+int				is_char(char c, char *charset);
 int				is_in_tab(int nb, int *tab);
 
 //----------------------------------- BTREE -------------------------------------\\
