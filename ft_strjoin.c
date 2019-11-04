@@ -1,43 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 11:44:06 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 16:16:31 by ylegzoul         ###   ########.fr       */
+/*   Created: 2019/11/04 15:43:50 by ylegzoul          #+#    #+#             */
+/*   Updated: 2019/11/04 16:13:22 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char const *str)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
+	char 	*ret;
 	int	i;
-	int	negativ;
-	int	res;
-	int	tmp;
+	int	j;
 
+	ret = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (ret == 0)
+		return (NULL);
 	i = 0;
-	negativ = 1;
-	res = 0;
-	while ((str[i] >= 9 && str[i] <= 32) || str[i] == 32)
-		i++;
-	if (str[i] == '-')
+	j = 0;
+	while (s1[i] != '\0')
 	{
-		i++;
-		negativ *= -1;
-	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		tmp = (int)str[i] - 48;
-		res = res * 10 + tmp;
+		ret[i] = s1[i];
 		i++;
 	}
-	if (negativ < 0)
-		return (-res);
-	return (res);
+	while (s2[j] != '\0')
+	{
+		ret[i + j] = s2[j];
+		j++;
+	}
+	ret[i + j] = '\0';
+	return (ret);
 }

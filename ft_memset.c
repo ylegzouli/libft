@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 11:44:06 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 16:16:31 by ylegzoul         ###   ########.fr       */
+/*   Created: 2019/11/04 16:17:38 by ylegzoul          #+#    #+#             */
+/*   Updated: 2019/11/04 16:24:01 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char const *str)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int	i;
-	int	negativ;
-	int	res;
-	int	tmp;
+	unsigned char	*ptr;
+	size_t		i;
 
 	i = 0;
-	negativ = 1;
-	res = 0;
-	while ((str[i] >= 9 && str[i] <= 32) || str[i] == 32)
-		i++;
-	if (str[i] == '-')
+	ptr = (unsigned char*)b;
+	while (i < len)
 	{
-		i++;
-		negativ *= -1;
-	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		tmp = (int)str[i] - 48;
-		res = res * 10 + tmp;
+		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	if (negativ < 0)
-		return (-res);
-	return (res);
+	return (b);
 }
