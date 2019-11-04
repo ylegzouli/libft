@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:32:32 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 14:33:00 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/04 14:38:50 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ static void		ft_put(char c)
 	write(1, &c, 1);
 }
 
-void		ft_putstr(char *str)
+void		ft_putstr(char const *s)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		ft_put(str[i]);
+		ft_put(s[i]);
 		i++;
 	}
 }
