@@ -18,7 +18,7 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s1);
 //char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//char				*ft_strsub(char const *s, unsigned int start, size_t len);                 ft_substr
+//char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
@@ -85,13 +85,13 @@ typedef struct				s_list
 
 //------------------------------------ PUT --------------------------------------\\
 
-void				ft_putnbr_base(int nbr, char *base);
-void				ft_putnbr_base_fd(int nbr, char *base, int fd);
+//void				ft_putnbr_base(int nbr, char *base);
+//void				ft_putnbr_base_fd(int nbr, char *base, int fd);
 
 //------------------------------------ IS ---------------------------------------\\
 
-int				is_char(char c, char *charset);
-int				is_in_tab(int nb, int *tab);
+//int				is_char(char c, char *charset);
+//int				is_in_tab(int nb, int *tab);
 
 //----------------------------------- BTREE -------------------------------------\\
 
@@ -102,25 +102,25 @@ typedef struct				s_btree
 	struct s_btree	*right;
 }					t_btree;
 
-void				btree_del(t_btree *tree);
-t_btree				*btree_create_node(void *item);
-int				btree_is_empty(t_btree *tree);
-void				btree_insert_data(t_btree **root, void *item, int (*cmp)(void *, void *));
-void				*btree_search_item(t_btree *root, void *data_ref, int (*cmp)(void *, void *));
+//void				btree_del(t_btree *tree);
+//t_btree				*btree_create_node(void *item);
+//int				btree_is_empty(t_btree *tree);
+//void				btree_insert_data(t_btree **root, void *item, int (*cmp)(void *, void *));
+//void				*btree_search_item(t_btree *root, void *data_ref, int (*cmp)(void *, void *));
 
 //----------------------------------- LST ----------------------------------------\\
 
-void				ft_sort_lst();
-void				ft_lstremove_if();
-t_list				*ft_strsplit_lst(char const *s, char c);
+//void				ft_sort_lst();
+//void				ft_lstremove_if();
+//t_list				*ft_strsplit_lst(char const *s, char c);
 
 //---------------------------------- AUTRES -------------------------------------\\
 
-void				ft_sort_int_tab(int *tab);
-void				ft_swap(char *a, char *b);
-int				ft_atoi_base(char *str, char *base);
-char				*ft_itoa_base(int nbr, int base);
-int				get_next_line(const int fd, char **line);
-int				ft_printf(const char *format, ...);
+//void				ft_sort_int_tab(int *tab);
+//void				ft_swap(char *a, char *b);
+//int				ft_atoi_base(char *str, char *base);
+//char				*ft_itoa_base(int nbr, int base);
+//int				get_next_line(const int fd, char **line);
+//int				ft_printf(const char *format, ...);
 
 #endif
