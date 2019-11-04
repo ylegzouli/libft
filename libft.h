@@ -21,7 +21,7 @@ char				*ft_strdup(const char *s1);
 //char				*ft_strsub(char const *s, unsigned int start, size_t len);                 ft_substr
 //char				*ft_strjoin(char const *s1, char const *s2);
 //char				*ft_strtrim(char const *s);
-//char				**ft_split(char const *s, char c);
+char				**ft_split(char const *s, char c);
 
 //------------------------------------ MEM --------------------------------------\\
 
@@ -37,13 +37,13 @@ char				*ft_strdup(const char *s1);
 //------------------------------------ PUT --------------------------------------\\
 
 void				ft_putchar(char c);
-void				ft_putstr(char const *s);
-void				ft_putendl(char const *s);
-void				ft_putnbr(int n);
-//void				ft_putchar_fd(char c, int fd);
+//void				ft_putstr(char const *s);
+//void				ft_putendl(char const *s);
+void				ft_putnbr(int nb);
+void				ft_putchar_fd(char c, int fd);
 //void				ft_putstr_fd(char const *s, int fd);
 //void				ft_putendl_fd(char const *s, int fd);
-//void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_fd(int nb, int fd);
 
 //------------------------------------ IS ---------------------------------------\\
 
@@ -57,7 +57,7 @@ void				ft_putnbr(int n);
 
 //---------------------------------- AUTRES -------------------------------------\\
 
-int				ft_atoi(const char *str);
+int				ft_atoi(char const *str);
 //char				*ft_itoa(int nbr);
 
 //________________________________________________ BONUS ____________________________________________________//

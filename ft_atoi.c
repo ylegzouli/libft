@@ -6,13 +6,13 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:44:06 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 13:18:12 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/04 14:14:48 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int		ft_atoi(char const *str)
 {
 	int	i;
 	int	negativ;
