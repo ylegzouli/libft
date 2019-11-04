@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:43:50 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 16:13:22 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:49:28 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
-	char 	*ret;
+	char	*ret;
 	int	i;
 	int	j;
 

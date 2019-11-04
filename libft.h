@@ -67,11 +67,10 @@ int				ft_atoi(char const *str);
 typedef struct				s_list
 {
 	void			*content;
-	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 
-//t_list				*ft_lstnew(void const *content, size_t content_size);
+//t_list				*ft_lstnew(void const *content);
 //void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 //void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 //t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));

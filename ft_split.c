@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:09:28 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 14:09:32 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:47:59 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int			ft_nb(char const *str, char c)
 	return (nb_chaine);
 }
 
-static char		*ft_create_str(char const *str, char c)
+static char			*ft_create_str(char const *str, char c)
 {
 	char		*str_ret;
 	int			i;
@@ -58,7 +58,7 @@ static char		*ft_create_str(char const *str, char c)
 	return (str_ret);
 }
 
-char		**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
 	int			i;
 	int			j;

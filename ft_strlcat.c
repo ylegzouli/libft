@@ -6,15 +6,15 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:27:55 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 13:29:13 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:47:13 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 size_t		ft_strlcat(char *dest, char *src, size_t size)
 {
-	size_t	 i;
-	size_t	 j;
-	size_t	 res;
+	size_t		i;
+	size_t		j;
+	size_t		res;
 
 	i = 0;
 	res = 0;

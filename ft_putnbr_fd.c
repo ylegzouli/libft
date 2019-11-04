@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:23:36 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 14:23:42 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:45:11 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void		ft_put(char c, int fd)
 	write(fd, &c, 1);
 }
 
-void		ft_putnbr_fd(int nb, int fd)
+void			ft_putnbr_fd(int nb, int fd)
 {
 	long int n;
 
