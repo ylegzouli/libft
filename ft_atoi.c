@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:44:06 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 17:40:44 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 12:14:34 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int		ft_atoi(char const *str)
 		res = res * 10 + tmp;
 		i++;
 	}
-	negativ < 0 ? return (-res) : return (res);
+	return (negativ < 0 ? -res : res);
 }

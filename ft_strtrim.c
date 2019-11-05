@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:28:10 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 16:46:59 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:56:52 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	is_charset(char c, char const *set)
 
 static int	strlen_trim(char const *s1, char const *set)
 {
-	int 	i;
+	int	i;
 	int	len;
 
 	i = 0;
@@ -36,7 +36,7 @@ static int	strlen_trim(char const *s1, char const *set)
 	while (s1[i] != '\0')
 	{
 		if (!is_charset(s1[1], set))
-			len ++;
+			len++;
 		i++;
 	}
 	return (len);
@@ -44,8 +44,8 @@ static int	strlen_trim(char const *s1, char const *set)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*ret;
 
 	ret = (char *)malloc(sizeof(char) * (strlen_trim(s1, set) + 1));

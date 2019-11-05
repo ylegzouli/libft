@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:27:15 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 17:46:29 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:56:14 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char		*ft_strdup(const char *s1)
 {
-	int		i;
+	int			i;
 	char		*ret;
 
 	i = 0;
@@ -27,7 +27,7 @@ char		*ft_strdup(const char *s1)
 	i = 0;
 	while (s1[i] != '\0')
 	{
-		ret[i] = src[i];
+		ret[i] = s1[i];
 		i++;
 	}
 	ret[i] = '\0';

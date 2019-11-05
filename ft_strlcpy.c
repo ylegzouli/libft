@@ -6,11 +6,13 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 14:05:32 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 13:32:34 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:32:44 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t		ft_strlcpy(char *dest, char *src, size_t size)
+#include "libft.h"
+
+size_t		ft_strlcpy(char *dest, char const *src, size_t size)
 {
 	size_t		i;
 	size_t		j;

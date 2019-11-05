@@ -6,11 +6,13 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:27:55 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 17:47:13 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:29:18 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t		ft_strlcat(char *dest, char *src, size_t size)
+#include "libft.h"
+
+size_t		ft_strlcat(char *dest, char const *src, size_t size)
 {
 	size_t		i;
 	size_t		j;

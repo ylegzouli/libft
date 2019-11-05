@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/01 11:18:51 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 11:45:31 by ylegzoul         ###   ########.fr       */
+/*   Created: 2019/11/05 10:16:50 by ylegzoul          #+#    #+#             */
+/*   Updated: 2019/11/05 10:21:40 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memcpy(void *dest, void const *src, size_t n)
 {
-	size_t	i;
+	int			i;
+	char		*des;
+	const char	*sr;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < (n - 1) && s1[i] == s2[i])
+	des = dest;
+	sr = src;
+	while (i < (int)n)
+	{
+		des[i] = sr[i];
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	return (dest);
 }

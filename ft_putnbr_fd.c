@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:23:36 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/04 17:45:11 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:26:55 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void			ft_putnbr_fd(int nb, int fd)
 	else
 	{
 		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr(n % 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 }
