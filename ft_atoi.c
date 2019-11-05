@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:44:06 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 12:14:34 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 13:55:33 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int		ft_atoi(char const *str)
 {
 	int	i;
 	int	negativ;
-	int	res;
-	int	tmp;
+ 	unsigned int	res;
+	unsigned int	tmp;
 
 	i = 0;
 	negativ = 1;
@@ -38,4 +38,9 @@ int		ft_atoi(char const *str)
 		i++;
 	}
 	return (negativ < 0 ? -res : res);
+}
+
+int main(int ac, char **av)
+{
+	printf("%d\n", ft_atoi(av[1]));
 }

@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:09:28 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 11:47:58 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 13:28:26 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ char				**ft_split(char const *s, char c)
 		while (s[i] && ft_is_sep(s[i], c))
 			i++;
 	}
-	liste[j] = 0;
+	liste[j] = NULL;
 	return (liste);
 }
