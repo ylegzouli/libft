@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:23:49 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 11:54:58 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 16:59:29 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void		*ft_memchr(void const *s, int c, size_t n)
 	size_t				i;
 	unsigned char		*ptr;
 
-	if (s == NULL)
-		return (NULL);
 	i = 0;
 	while (i < n)
 	{

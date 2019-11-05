@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:44:06 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 13:55:33 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 17:36:03 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int neg;
-	int res;
+	unsigned int i;
+	unsigned int neg;
+	unsigned int res;
 
 	i = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)

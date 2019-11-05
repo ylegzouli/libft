@@ -11,13 +11,13 @@
 
 size_t				ft_strlcat(char *dest, char const *src, size_t size);
 char				*ft_strchr(char const *s, int c);
-//char				*ft_strrchr(const char *s, int c);
+char				*ft_strrchr(const char *s, int c);
 size_t				ft_strlcpy(char *dest, char const *src, size_t size);
-//char				*ft_strnstr(const char *str, const char *to_find, size_t len);
+char				*ft_strnstr(const char *str, const char *to_find, size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s1);
-//char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
@@ -32,7 +32,7 @@ void				*ft_memccpy(void *dest, void const *src, int c, size_t size);
 void				*ft_memmove(void *s1, void const *s2, size_t n);
 void				*ft_memchr(void const *s, int c, size_t n);
 int					ft_memcmp(void const *s1, void const *s2, size_t n);
-//void				*ft_calloc(size_t count, size_t size);
+void				*ft_calloc(size_t count, size_t size);
 
 //------------------------------------ PUT --------------------------------------
 
@@ -58,7 +58,7 @@ int					ft_tolower(int c);
 //---------------------------------- AUTRES -------------------------------------
 
 int					ft_atoi(char const *str);
-//char				*ft_itoa(int nbr);
+char				*ft_itoa(int nbr);
 
 //________________________________________________ BONUS ____________________________________________________//
 

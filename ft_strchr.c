@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:15:28 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 11:55:47 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 17:01:40 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char		*ft_strchr(char const *s, int c)
 	int		i;
 	char	*tmp;
 
-	if (s == NULL)
-		return (NULL);
 	i = 0;
 	tmp = (char *)s;
 	while (tmp[i] != '\0')

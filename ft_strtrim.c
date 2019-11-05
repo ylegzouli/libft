@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:28:10 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 13:30:44 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 18:25:06 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,17 @@ static int	strlen_trim(char const *s1, char const *set)
 	int	len;
 
 	i = 0;
-	len = 0;
-	while (s1[i] != '\0')
+	len = ft_strlen(s1);
+	while (is_charset(s1[i], set) && len >= 0)
 	{
-		if (!is_charset(s1[1], set))
-			len++;
+		len--;
 		i++;
+	}
+	i = ft_strlen(s1) - 1;
+	while (is_charset(s1[i], set) && len >= 0)
+	{
+		len--;
+		i--;
 	}
 	return (len);
 }
@@ -50,17 +55,16 @@ char		*ft_strtrim(char const *s1, char const *set)
 
 	ret = (char *)malloc(sizeof(char) * (strlen_trim(s1, set) + 1));
 	if (ret == 0)
-		return (NULL);
+		return (ret);
 	i = 0;
 	j = 0;
-	while (s1[i] != '\0')
-	{
-		if (!is_charset(s1[i], set))
-		{
-			ret[j] = s1[i];
-			j++;
-		}
+	while (is_charset(s1[i], set))
 		i++;
+	while (j < strlen_trim(s1, set))
+	{
+		ret[j] = s1[i];
+		i++;
+		j++;
 	}
 	ret[j] = '\0';
 	return (ret);

@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:09:28 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 13:28:26 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 17:58:46 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ char				**ft_split(char const *s, char c)
 	j = 0;
 	liste = 0;
 	liste = malloc((1 + ft_nb(s, c)) * sizeof(char *));
+	if (liste == 0)
+		return (NULL);
 	while (s[i] && ft_is_sep(s[i], c))
 		i++;
 	while (s[i])

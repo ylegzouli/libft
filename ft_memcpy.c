@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:16:50 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 10:21:40 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/05 16:57:14 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, void const *src, size_t n)
 	i = 0;
 	des = dest;
 	sr = src;
+	if (dest == NULL && src == NULL)
+		return (dest);
 	while (i < (int)n)
 	{
 		des[i] = sr[i];
