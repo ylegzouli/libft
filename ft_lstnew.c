@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 11:17:09 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/06 11:27:56 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/06 18:51:39 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 t_list		*ft_lstnew(void const *content)
 {
 	t_list	*li;
-	
+
 	li = malloc(sizeof(t_list));
 	if (li == 0)
 		return (NULL);
-//	li->content = malloc(sizeof(content));
 	li->content = (void *)content;
 	li->next = NULL;
 	return (li);

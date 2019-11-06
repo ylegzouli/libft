@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 11:00:48 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/06 11:13:44 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/06 19:39:15 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	len_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strlen(&s[start]));
 }
 
-char 		*ft_substr(char const *s, unsigned int start, size_t len)
+char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*ret;
 	size_t		i;

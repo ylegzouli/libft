@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 13:34:59 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/06 13:53:28 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/06 17:33:27 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void		ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst)
-	{
-		f(lst);
-		lst = lst->next;
-	}
+	if (!lst)
+		return ;
+	f(lst->content);
+	ft_lstiter(lst->next, f);
 }

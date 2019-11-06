@@ -6,13 +6,13 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:04:40 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/06 12:08:51 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/06 18:50:42 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list          *ft_lstlast(t_list *lst)
+t_list			*ft_lstlast(t_list *lst)
 {
 	t_list		*li;
 

@@ -6,13 +6,13 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 11:51:39 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/06 11:55:02 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/06 18:46:06 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void              ft_lstadd_front(t_list **alst, t_list *new)
+void			ft_lstadd_front(t_list **alst, t_list *new)
 {
 	t_list	*li;
 
