@@ -6,7 +6,7 @@
 #    By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:09:27 by ylegzoul          #+#    #+#              #
-#    Updated: 2019/11/06 20:23:11 by ylegzoul         ###   ########.fr        #
+#    Updated: 2019/11/07 10:45:32 by ylegzoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC= ft_substr.c ft_strrchr.c ft_strmapi.c ft_calloc.c ft_strnstr.c ft_itoa.c  f
 
 OBJ=$(SRC:.c=.o)
 
-$(NAME): libft.h
+$(NAME): libft.h $(OBJ)
 	$(CC) $(CFLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)

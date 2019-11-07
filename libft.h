@@ -71,7 +71,7 @@ typedef struct				s_list
 }					t_list;
 
 t_list				*ft_lstnew(void const *content);
-void				ft_lstdelone(t_list **alst, void (*del)(void *));
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void				ft_lstadd_front(t_list **alst, t_list *new);
