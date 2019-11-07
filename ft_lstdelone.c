@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 13:17:29 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/07 10:20:23 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/07 11:12:52 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,4 @@ void			ft_lstdelone(t_list *lst, void (*del)(void *))
 		return ;
 	del(lst->content);
 	free(lst);
-	lst = NULL;
 }

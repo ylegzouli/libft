@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:28:10 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/05 18:25:06 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/07 11:20:56 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	char	*ret;
 
+	if (!s1 || !set)
+		return (NULL);
 	ret = (char *)malloc(sizeof(char) * (strlen_trim(s1, set) + 1));
 	if (ret == 0)
 		return (ret);
