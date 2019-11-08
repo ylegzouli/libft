@@ -48,6 +48,8 @@ static char			*ft_create_str(char const *str, char c)
 	while (str[i] && !ft_is_sep(str[i], c))
 		i++;
 	str_ret = malloc((i + 1) * sizeof(char));
+	if (!str_ret)
+		return (NULL);
 	i = 0;
 	while (str[i] && !ft_is_sep(str[i], c))
 	{

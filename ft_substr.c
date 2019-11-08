@@ -14,15 +14,15 @@
 
 static int	len_substr(char const *s, unsigned int start, size_t len)
 {
-	if (ft_strlen(&s[start]) >= len)
-		return (len);
+	if (ft_strlen(&s[start]) > len)
+		return ((int)len);
 	else
 		return (ft_strlen(&s[start]));
 }
 
 static char	*ret_error(char *ret)
 {
-	ret = malloc(1);
+	ret = malloc(sizeof(char));
 	ret[0] = '\0';
 	return (ret);
 }
@@ -30,18 +30,20 @@ static char	*ret_error(char *ret)
 char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*ret;
-	size_t		i;
+	int			i;
+	int			size;
 
 	ret = NULL;
 	if (!s || !len)
 		return (ret_error(ret));
-	if (start > len)
+	if (start >= len || start >= ft_strlen(s))
 		return (ret_error(ret));
-	ret = (char *)malloc(sizeof(char) * len_substr(s, start, len) + 1);
+	size = len_substr(s, start, len);
+	ret = (char *)malloc(sizeof(char) * (size + 1));
 	if (ret == 0)
 		return (NULL);
 	i = 0;
-	while (s[start] != '\0' && i < len)
+	while (s[start] != '\0' && i < size)
 	{
 		ret[i] = s[start];
 		i++;
