@@ -12,43 +12,39 @@
 
 #include "libft.h"
 
-static int	len_substr(char const *s, unsigned int start, size_t len)
+static char	*ft_subnull(void)
 {
-	if (ft_strlen(&s[start]) > len)
-		return ((int)len);
-	else
-		return (ft_strlen(&s[start]));
-}
+	char *s;
 
-static char	*ret_error(char *ret)
-{
-	ret = malloc(sizeof(char));
-	ret[0] = '\0';
-	return (ret);
+	s = malloc(1);
+	s[0] = 0;
+	return (s);
 }
 
 char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*ret;
-	int			i;
-	int			size;
+	char			*s2;
+	size_t			j;
 
-	ret = NULL;
-	if (!s || !len)
-		return (ret_error(ret));
-	if (start >= len || start >= ft_strlen(s))
-		return (ret_error(ret));
-	size = len_substr(s, start, len);
-	ret = (char *)malloc(sizeof(char) * (size + 1));
-	if (ret == 0)
-		return (NULL);
-	i = 0;
-	while (s[start] != '\0' && i < size)
+	j = 0;
+	s2 = 0;
+	if (len == 0 || s == 0)
+		return (ft_subnull());
+	while (s[j] && j < start)
+		j++;
+	if (j != start)
+		return (ft_subnull());
+	j = 0;
+	while (s[start + j] && j < len)
+		j++;
+	if (!(s2 = malloc(j + 1)))
+		return (0);
+	j = 0;
+	while (s[start + j] && j < len)
 	{
-		ret[i] = s[start];
-		i++;
-		start++;
+		s2[j] = s[j + start];
+		j++;
 	}
-	ret[i] = '\0';
-	return (ret);
+	s2[j] = 0;
+	return (s2);
 }

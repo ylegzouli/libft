@@ -12,62 +12,59 @@
 
 #include "libft.h"
 
-static int	is_charset(char c, char const *set)
+static int	ft_isset(char c, const char *set)
 {
-	int	i;
-
-	i = 0;
-	while (set[i] != '\0')
+	while (*set)
 	{
-		if (c == set[i])
+		if (c == (char)*set)
 			return (1);
-		i++;
+		set++;
 	}
 	return (0);
 }
 
-static int	strlen_trim(char const *s1, char const *set)
+static char	*ft_strnull(void)
 {
-	int	i;
-	int	len;
+	char *s;
 
-	i = 0;
-	len = ft_strlen(s1);
-	while (is_charset(s1[i], set) && len >= 0)
-	{
-		len--;
-		i++;
-	}
-	i = ft_strlen(s1) - 1;
-	while (is_charset(s1[i], set) && len >= 0)
-	{
-		len--;
-		i--;
-	}
-	return (len);
+	s = malloc(1);
+	s[0] = 0;
+	return (s);
+}
+
+static int	ft_init(char **s, int *a, int *b)
+{
+	*s = 0;
+	*a = 0;
+	*b = 0;
+	return (1);
 }
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
+	char	*s2;
+	int		len;
 	int		i;
-	int		j;
-	char	*ret;
 
-	if (!s1 || !set)
-		return (NULL);
-	ret = (char *)malloc(sizeof(char) * (strlen_trim(s1, set) + 1));
-	if (ret == 0)
-		return (ret);
+	if (ft_init(&s2, &len, &i) && (s1 == 0 || set == 0))
+		return (ft_strnull());
+	while (*s1 && ft_isset(*s1, set))
+		s1++;
 	i = 0;
-	j = 0;
-	while (is_charset(s1[i], set))
-		i++;
-	while (j < strlen_trim(s1, set))
+	len = 0;
+	while (s1[i])
 	{
-		ret[j] = s1[i];
-		i++;
-		j++;
+		while (s1[i] && !ft_isset(s1[i], set))
+			i++;
+		len = i;
+		while (s1[i] && ft_isset(s1[i], set))
+			i++;
 	}
-	ret[j] = '\0';
-	return (ret);
+	if (!(s2 = malloc(1 + len)))
+		return (0);
+	i = -1;
+	while (++i < len)
+		s2[i] = s1[i];
+	s2[i] = '\0';
+	return (s2);
 }

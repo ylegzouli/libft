@@ -12,40 +12,50 @@
 
 #include "libft.h"
 
-static void	ft_itoa_neg(int *n, int *neg)
+static char		*ft_rev(int i, char *tab)
 {
-	if (*n < 0)
+	char	*s;
+	int		j;
+
+	j = 0;
+	if (!(s = malloc(i + 2)))
+		return (0);
+	if (tab[0] == '-')
 	{
-		*n *= -1;
-		*neg = 1;
+		s[j] = '-';
+		j++;
 	}
+	while (i >= 0 && tab[i] != '-')
+	{
+		s[j++] = tab[i--];
+	}
+	s[j] = 0;
+	return (s);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	int		tmp;
-	int		len;
-	int		neg;
-	char	*str;
+	char			tab[12];
+	int				i;
+	unsigned int	k;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	tmp = n;
-	len = 2;
-	neg = 0;
-	ft_itoa_neg(&n, &neg);
-	while (tmp /= 10)
-		len++;
-	len = len + neg;
-	if ((str = (char*)malloc(sizeof(char) * len)) == 0)
-		return (NULL);
-	str[--len] = '\0';
-	while (len--)
+	i = 0;
+	tab[0] = '0';
+	if (n < 0)
 	{
-		str[len] = n % 10 + '0';
-		n = n / 10;
+		k = -n;
+		tab[0] = '-';
+		i++;
 	}
-	if (neg)
-		str[0] = '-';
-	return (str);
+	else
+		k = n;
+	if (k == 0)
+		i++;
+	while (k != 0)
+	{
+		tab[i] = (char)(k % 10 + '0');
+		i++;
+		k = k / 10;
+	}
+	return (ft_rev(i - 1, tab));
 }
