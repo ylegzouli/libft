@@ -6,7 +6,7 @@
 #    By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 15:59:06 by ylegzoul          #+#    #+#              #
-#    Updated: 2019/11/07 15:59:09 by ylegzoul         ###   ########.fr        #
+#    Updated: 2019/11/12 17:51:50 by ylegzoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ SRCS		 =	ft_calloc.c\
 				ft_putendl_fd.c\
 				ft_putnbr_fd.c
 
-SRCB		= ft_lstmap.c ft_lstclear.c ft_lstiter.c ft_lstdelone.c ft_lstlast.c ft_lstsize.c ft_lstadd_front.c ft_lstadd_back.c ft_lstnew.c
+SRCB		= ft_lstmap.c ft_lstclear.c ft_lstiter.c ft_lstdelone.c ft_lstlast.c ft_lstsize.c ft_lstadd_front.c ft_lstadd_back.c ft_lstnew.c ft_tab_to_lst.c ft_print_lst_char.c
 
 OBJS		= ${SRCS:.c=.o}
 
