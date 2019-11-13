@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 17:52:04 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/12 17:53:07 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/13 15:16:47 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void		ft_print_lst_char(t_list *li)
 {
 	while (li != NULL)
 	{
-		write(1, &li->content, 1);
+		write(1, (li->content), 1);
 		li = li->next;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:07:57 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/12 17:53:26 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/13 13:18:24 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 int				ft_atoi(char const *str);
 char			*ft_itoa(int n);
-t_list			*ft_lstnew(void const *content);
+t_list			*ft_lstnew(void *content);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
@@ -67,7 +67,7 @@ int				ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstclear(t_list **alst, void (*del)(void*));
-void        	ft_tab_to_lst(t_list **li, void *tab, size_t size);
+void        	ft_tab_to_lst(t_list **li, char *tab, size_t size);
 void        	ft_print_lst_char(t_list *li);
 
 #endif
