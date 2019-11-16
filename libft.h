@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:07:57 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/13 13:18:24 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/16 14:04:39 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,10 @@ void			ft_putchar_lst(char c, t_list **li);
 void			ft_putstr_lst(char *s, t_list **li);
 void			ft_putnbr_lst(int nb, t_list **li);
 t_list          *ft_putnbr_base_lst(int n, int baselen, char *base, t_list **li);
+void            ft_putnbr_lst_u(unsigned int nb, t_list **li);
+t_list          *ft_putnbr_base_lst_u(unsigned int n, unsigned int baselen,
+char *base, t_list **li);
+t_list          *ft_putnbr_base_lst_ul(unsigned long n, unsigned long baselen,
+char *base, t_list **li);
 
 #endif

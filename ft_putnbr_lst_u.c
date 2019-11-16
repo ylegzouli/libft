@@ -6,15 +6,15 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:23:36 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/16 13:15:59 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/16 13:00:15 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_putnbr_lst(int nb, t_list **li)
+void			ft_putnbr_lst_u(unsigned int nb, t_list **li)
 {
-	long int	n;
+	long unsigned int	n;
 	char		tmp;
 
 	n = nb;
