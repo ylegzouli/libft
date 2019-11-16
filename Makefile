@@ -24,6 +24,7 @@ SRCS		 =	ft_calloc.c\
 				ft_memmove.c\
 				ft_strlcat.c\
 				ft_strnstr.c\
+				ft_strcpy.c\
 				ft_toupper.c\
 				ft_atoi.c\
 				ft_isascii.c\
@@ -45,9 +46,10 @@ SRCS		 =	ft_calloc.c\
 				ft_putchar_fd.c\
 				ft_putstr_fd.c\
 				ft_putendl_fd.c\
-				ft_putnbr_fd.c
+				ft_putnbr_fd.c\
+				ft_itoa_base.c\
 
-SRCB		= ft_lstmap.c ft_lstclear.c ft_lstiter.c ft_lstdelone.c ft_lstlast.c ft_lstsize.c ft_lstadd_front.c ft_lstadd_back.c ft_lstnew.c ft_tab_to_lst.c ft_print_lst_char.c
+SRCB		= ft_putnbr_base_lst.c ft_lstnew_malloc.c ft_putnbr_lst.c ft_putchar_lst.c ft_putstr_lst.c ft_lstmap.c ft_lstclear.c ft_lstiter.c ft_lstdelone.c ft_lstlast.c ft_lstsize.c ft_lstadd_front.c ft_lstadd_back.c ft_lstnew.c ft_tab_to_lst.c ft_print_lst_char.c
 
 OBJS		= ${SRCS:.c=.o}
 
