@@ -6,20 +6,25 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 17:49:50 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/13 15:19:35 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/21 11:10:25 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_tab_to_lst(t_list **li, char *tab, size_t size)
+int			ft_tab_to_lst(t_list **li, char *tab, size_t size)
 {
-	size_t 		i;
+	size_t		i;
+	t_list		*tmp;
 
-    i = 0;
-    while (i < size)
-    {
-        ft_lstadd_back(li, ft_lstnew((&tab[i])));
-        i++;
-    }
+	i = 0;
+	while (i < size)
+	{
+		tmp = ft_lstnew((&tab[i]));
+		if (tmp == NULL)
+			return (0);
+		ft_lstadd_back(li, tmp);
+		i++;
+	}
+	return (1);
 }

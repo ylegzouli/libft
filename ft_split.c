@@ -6,7 +6,7 @@
 /*   By: ylegzoul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:09:28 by ylegzoul          #+#    #+#             */
-/*   Updated: 2019/11/11 13:48:58 by ylegzoul         ###   ########.fr       */
+/*   Updated: 2019/11/21 11:11:16 by ylegzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int		ft_is_sep(char c, char c2)
 
 static char		**ft_strnull(char **liste)
 {
-	char 	**s;
+	char	**s;
 	int		i;
 
 	i = 0;
