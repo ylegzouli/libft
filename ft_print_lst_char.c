@@ -16,7 +16,8 @@ void		ft_print_lst_char(t_list *li)
 {
 	while (li != NULL)
 	{
-		write(1, (li->content), 1);
+		if (li->content != 0)
+			write(1, (li->content), 1);
 		li = li->next;
 	}
 }
